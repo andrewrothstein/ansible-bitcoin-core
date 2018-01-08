@@ -18,6 +18,7 @@
       become: yes
       become_user: root
       unarchive:
+        remote_src: yes
         src: /tmp/{{bitcoin_core_tgz}}
         dest: '{{bitcoin_core_parent_install_dir}}'
         creates: '{{bitcoin_core_install_dir}}'
