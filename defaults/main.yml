@@ -1,0 +1,18 @@
+---
+# defaults file for bitcoin-core
+bitcoin_core_ver: '0.15.1'
+bitcoin_core_mirror: https://bitcoin.org/bin
+bitcoin_core_platform: x86_64-linux-gnu
+
+bitcoin_core_checksums:
+  '0.15.1':
+    aarch64-linux-gnu: sha256:d64d2e27cad78bbd2a0268bdaa9efa3f1eca670a4fab462b5e851699c780e3a0
+    arm-linux-gnueabihf: sha256:ceba092c9a390082ff184c8d82a24bc34d7f9b421dc5c1e6847fcf769541f305
+    i686-pc-linux-gnu: sha256:231e4c9f5cf4ba977dbaf118bf38b0fde4d50ab7b9efd65bee6647fb14035a2c
+    osx64: sha256:b6771c5d67fb6b9c4882cc351e579470a008211d76407155e544b28b00fcd711
+    osx: sha256:0ce5ca1ba424603526d8a40d9321f1f735797a7205a7fbbe39561c078f2a0858
+    win32: sha256:4d2ad1371df1904367955d3f250212d0edd9f338c26d5cd60d7d8ce3f1733f5a
+    win64: sha256:b858521496c0d7699a6916c20767cdb123eb39be70ffc544d6876b08af3b696a
+    x86_64-linux-gnu: sha256:387c2e12c67250892b0814f26a5a38f837ca8ab68c86af517f975a2a2710225b
+
+bitcoin_core_parent_install_dir: /usr/local
