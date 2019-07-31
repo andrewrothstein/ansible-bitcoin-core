@@ -2,7 +2,7 @@
 - name: check for bitcoin-core installation
   become: yes
   stat:
-    path: '{{bitcoin_core_install_dir}}'
+    path: '{{ bitcoin_core_install_dir }}'
   changed_when: false
   register: bitcoin_core_binary
 - when: not bitcoin_core_binary.stat.exists
@@ -11,30 +11,30 @@
       become: yes
       become_user: root
       get_url:
-        url: '{{bitcoin_core_tgz_url}}'
-        dest: /tmp/{{bitcoin_core_tgz}}
+        url: '{{ bitcoin_core_tgz_url }}'
+        dest: /tmp/{{ bitcoin_core_tgz }}
         mode: 0644
     - name: unarchive...
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{bitcoin_core_tgz}}
-        dest: '{{bitcoin_core_parent_install_dir}}'
-        creates: '{{bitcoin_core_install_dir}}'
+        src: /tmp/{{ bitcoin_core_tgz }}
+        dest: '{{ bitcoin_core_parent_install_dir }}'
+        creates: '{{ bitcoin_core_install_dir }}'
   always:
     - name: cleanup...
       become: yes
       become_user: root
       file:
-        path: /tmp/{{bitcoin_core_tgz}}
+        path: /tmp/{{ bitcoin_core_tgz }}
         state: absent
 - name: link..
   become: yes
   become_user: root
   file:
-    src: '{{bitcoin_core_install_dir}}'
-    dest: '{{bitcoin_core_link_dir}}'
+    src: '{{ bitcoin_core_install_dir }}'
+    dest: '{{ bitcoin_core_link_dir }}'
     state: link
 - name: add to login shell
   become: yes
@@ -43,6 +43,6 @@
     - f: bitcoin.sh
       d: /etc/profile.d
   template:
-    src: '{{item.f}}.j2'
-    dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m|default("0644")}}'
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m | default("0644") }}'

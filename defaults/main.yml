@@ -1,18 +1,25 @@
 ---
 # defaults file for bitcoin-core
-bitcoin_core_ver: '0.15.1'
+bitcoin_core_ver: '0.18.0'
 bitcoin_core_mirror: https://bitcoin.org/bin
 bitcoin_core_platform: x86_64-linux-gnu
+bitcoin_core_archive_type: tar.gz
 
 bitcoin_core_checksums:
-  '0.15.1':
-    aarch64-linux-gnu: sha256:d64d2e27cad78bbd2a0268bdaa9efa3f1eca670a4fab462b5e851699c780e3a0
-    arm-linux-gnueabihf: sha256:ceba092c9a390082ff184c8d82a24bc34d7f9b421dc5c1e6847fcf769541f305
-    i686-pc-linux-gnu: sha256:231e4c9f5cf4ba977dbaf118bf38b0fde4d50ab7b9efd65bee6647fb14035a2c
-    osx64: sha256:b6771c5d67fb6b9c4882cc351e579470a008211d76407155e544b28b00fcd711
-    osx: sha256:0ce5ca1ba424603526d8a40d9321f1f735797a7205a7fbbe39561c078f2a0858
-    win32: sha256:4d2ad1371df1904367955d3f250212d0edd9f338c26d5cd60d7d8ce3f1733f5a
-    win64: sha256:b858521496c0d7699a6916c20767cdb123eb39be70ffc544d6876b08af3b696a
-    x86_64-linux-gnu: sha256:387c2e12c67250892b0814f26a5a38f837ca8ab68c86af517f975a2a2710225b
+  '0.18.0':
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-aarch64-linux-gnu.tar.gz
+    aarch64-linux-gnu: sha256:bfc3b8fddbb7ab9b532c9866859fc507ec959bdb82954966f54c8ebf8c7bb53b
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-arm-linux-gnueabihf.tar.gz
+    arm-linux-gnueabihf: sha256:3d7eb57290b2f14c495a24ecbab8100b35861f0c81bc10d86e5c0a8ec8284b27
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-i686-pc-linux-gnu.tar.gz
+    i686-pc-linux-gnu: sha256:36ce9ffb375f6ee280df5a86e61038e3c475ab9dee34f6f89ea82b65a264183b
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-riscv64-linux-gnu.tar.gz
+    riscv64-linux-gnu: sha256:4ee18d8b399c4914521d05415a18ffaa53723d1d8211ffe949e747c9329d51ff
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
+    x86_64-linux-gnu: sha256:5146ac5310133fbb01439666131588006543ab5364435b748ddfc95a8cb8d63f
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-osx64.tar.gz
+    osx64: sha256:12ae4dfc7566d08116509a592bb3ab5036b50405cba75f7d52105cee98ba47b0
+    # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-win64.zip
+    win64: sha256:29f449e2d1986a924b512e043893f932170830a45981323d8943ba6410848153
 
 bitcoin_core_parent_install_dir: /usr/local
