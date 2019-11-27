@@ -1,9 +1,13 @@
 ---
 # defaults file for bitcoin-core
-bitcoin_core_ver: '0.18.0'
+bitcoin_core_ver: '0.19.0.1'
 bitcoin_core_mirror: https://bitcoin.org/bin
-bitcoin_core_platform: x86_64-linux-gnu
+bitcoin_core_os: linux-gnu
+bitcoin_core_arch: x86_64
+bitcoin_core_platform: '{{ bitcoin_core_arch }}-{{ bitcoin_core_os }}'
 bitcoin_core_archive_type: tar.gz
+
+bitcoin_core_parent_install_dir: /usr/local
 
 bitcoin_core_checksums:
   '0.18.0':
@@ -21,5 +25,33 @@ bitcoin_core_checksums:
     osx64: sha256:12ae4dfc7566d08116509a592bb3ab5036b50405cba75f7d52105cee98ba47b0
     # https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-win64.zip
     win64: sha256:29f449e2d1986a924b512e043893f932170830a45981323d8943ba6410848153
-
-bitcoin_core_parent_install_dir: /usr/local
+  '0.18.1':
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-aarch64-linux-gnu.tar.gz
+    aarch64-linux-gnu: sha256:88f343af72803b851c7da13874cc5525026b0b55e63e1b5e1298390c4688adc6
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-arm-linux-gnueabihf.tar.gz
+    arm-linux-gnueabihf: sha256:cc7d483e4b20c5dabd4dcaf304965214cf4934bcc029ca99cbc9af00d3771a1f
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-i686-pc-linux-gnu.tar.gz
+    i686-pc-linux-gnu: sha256:989e847b3e95fc9fedc0b109cae1b4fa43348f2f712e187a118461876af9bd16
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-riscv64-linux-gnu.tar.gz
+    riscv64-linux-gnu: sha256:425ee5ec631ae8da71ebc1c3f5c0269c627cf459379b9b030f047107a28e3ef8
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-x86_64-linux-gnu.tar.gz
+    x86_64-linux-gnu: sha256:600d1db5e751fa85903e935a01a74f5cc57e1e7473c15fd3e17ed21e202cfe5a
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-osx64.tar.gz
+    osx64: sha256:b7bbcee7a7540f711b171d6981f939ca8482005fde22689bc016596d80548bb1
+    # https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-win64.zip
+    win64: sha256:b0f94ab43c068bac9c10a59cb3f1b595817256a00b84f0b724f8504b44e1314f
+  '0.19.0.1':
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-aarch64-linux-gnu.tar.gz
+    aarch64-linux-gnu: sha256:c258c6416225afb08c4396847eb3d5da61a124f1b5c61cccb5a2e903e453ce7f
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-arm-linux-gnueabihf.tar.gz
+    arm-linux-gnueabihf: sha256:c9335ab5286b66b3fd93be5cd21695885765cb2ffea2a90d92bf99b43f549787
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-i686-pc-linux-gnu.tar.gz
+    i686-pc-linux-gnu: sha256:94d1b581dfd21dc64e5510c3b31d6592aed9d33851db5795fb549354f00b3e72
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-riscv64-linux-gnu.tar.gz
+    riscv64-linux-gnu: sha256:3e35dccc55b6de206a9c9b21c2d10fb79a184e817906bf75a6f47b57a3f1df66
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-x86_64-linux-gnu.tar.gz
+    x86_64-linux-gnu: sha256:732cc96ae2e5e25603edf76b8c8af976fe518dd925f7e674710c6c8ee5189204
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-osx64.tar.gz
+    osx64: sha256:a64e4174e400f3a389abd76f4d6b1853788730013ab1dedc0e64b0a0025a0923
+    # https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-win64.zip
+    win64: sha256:7706593de727d893e4b1e750dc296ea682ccee79acdd08bbc81eaacf3b3173cf

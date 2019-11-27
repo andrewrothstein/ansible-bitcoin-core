@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=0.18.0
+VER=${1:-0.19.0.1}
 DIR=~/Downloads
 MIRROR=https://bitcoin.org/bin/bitcoin-core-${VER}
 
